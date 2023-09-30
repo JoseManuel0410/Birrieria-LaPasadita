@@ -41,6 +41,7 @@ namespace Birrieria_LaPasadita.Formularios
             }
         }
 
+        // Boton para ir al formulario de Empleados
         private void btnempleados_Click(object sender, RoutedEventArgs e)
         {
             Formularios.frmempleados x = new Formularios.frmempleados();
