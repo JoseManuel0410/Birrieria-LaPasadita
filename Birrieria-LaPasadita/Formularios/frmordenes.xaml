@@ -118,7 +118,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="1">
+            <StackPanel Grid.Column="1" VerticalAlignment="Top">
                 <TextBlock materialDesign:ElevationAssist.Elevation="Dp16"
                            HorizontalAlignment="Center"
                            Foreground="WhiteSmoke"
@@ -272,7 +272,7 @@
                             ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" />
                 </StackPanel>
             </StackPanel>
-            <StackPanel>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
                 <WrapPanel HorizontalAlignment="Center" Margin="0,30,0,30">
                     <TextBlock VerticalAlignment="Center" 
                                Padding="0,0,15,0"
