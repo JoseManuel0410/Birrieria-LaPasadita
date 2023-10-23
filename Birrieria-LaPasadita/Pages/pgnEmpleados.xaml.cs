@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Birrieria_LaPasadita
+namespace Birrieria_LaPasadita.Pages
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para pgnEmpleados.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class pgnEmpleados : Page
     {
-        public MainWindow()
+        public pgnEmpleados()
         {
             InitializeComponent();
-        }
-
-        private void btninicio_Click(object sender, RoutedEventArgs e)
-        {
-            Formularios.frmbase x = new Formularios.frmbase();
-            x.Show();
-            this.Close();
         }
     }
 }

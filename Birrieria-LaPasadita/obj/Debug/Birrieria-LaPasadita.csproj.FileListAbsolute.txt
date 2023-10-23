@@ -51,12 +51,8 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\bin\Debug\Mate
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.csproj.AssemblyReference.cache
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Dictionaries\EstiloBoton.baml
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Dictionaries\EstiloMenu.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmclientes.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmempleados.g.cs
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmmenu.g.cs
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmordenes.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_clientes.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_empleados.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmventas.g.cs
@@ -67,8 +63,6 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birr
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\App.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmclientes.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmempleados.baml
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmmenu.baml
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmordenes.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_clientes.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_empleados.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmventas.baml
@@ -80,3 +74,9 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birr
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.csproj.CopyComplete
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.exe
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.pdb
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnOrdenes.g.cs
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmbase.g.cs
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmbase.baml
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnOrdenes.baml
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnEmpleados.g.cs
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnEmpleados.baml

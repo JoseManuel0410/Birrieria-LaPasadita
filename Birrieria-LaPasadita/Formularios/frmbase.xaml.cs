@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,31 +11,32 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Birrieria_LaPasadita.Pages;
 
 namespace Birrieria_LaPasadita.Formularios
 {
     /// <summary>
-    /// Lógica de interacción para frmmenu.xaml
+    /// Lógica de interacción para frmbase.xaml
     /// </summary>
-    public partial class frmmenu : Window
+    public partial class frmbase : Window
     {
-        public frmmenu()
+        public frmbase()
         {
             InitializeComponent();
         }
 
         private void btnordenes_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmordenes x = new Formularios.frmordenes();
-            x.Show();
-            this.Close();
+            btnempleados.IsEnabled = true;
+            Main.Content = new pgnOrdenes();
+            btnordenes.IsEnabled = false;
         }
 
         private void btnempleados_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmempleados x = new Formularios.frmempleados();
-            x.Show();
-            this.Close();
+            btnordenes.IsEnabled = true;
+            Main.Content = new pgnEmpleados();
+            btnempleados.IsEnabled = false;
         }
 
         private void btnventas_Click(object sender, RoutedEventArgs e)

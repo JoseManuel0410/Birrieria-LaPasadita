@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\App.xaml
-102099856566
+9-76642105
 
-12934087279
+13-775514697
 161510885183
-Dictionaries\EstiloBoton.xaml;Dictionaries\EstiloMenu.xaml;Formularios\frmclientes.xaml;Formularios\frmempleados.xaml;Formularios\frmmenu.xaml;Formularios\frmordenes.xaml;Formularios\frmregistro_clientes.xaml;Formularios\frmregistro_empleados.xaml;Formularios\frmventas.xaml;MainWindow.xaml;
+Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmempleados.xaml;Formularios\frmregistro_clientes.xaml;Formularios\frmregistro_empleados.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnEmpleados.xaml;Pages\pgnOrdenes.xaml;
 
 False
 

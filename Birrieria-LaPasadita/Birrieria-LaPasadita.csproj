@@ -66,11 +66,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Dictionaries\EstiloBoton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dictionaries\EstiloMenu.xaml">
+    <Page Include="Formularios\frmbase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -79,14 +75,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Formularios\frmempleados.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Formularios\frmmenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Formularios\frmordenes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,17 +98,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Formularios\frmbase.xaml.cs">
+      <DependentUpon>frmbase.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmclientes.xaml.cs">
       <DependentUpon>frmclientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmempleados.xaml.cs">
       <DependentUpon>frmempleados.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmmenu.xaml.cs">
-      <DependentUpon>frmmenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmordenes.xaml.cs">
-      <DependentUpon>frmordenes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmregistro_clientes.xaml.cs">
       <DependentUpon>frmregistro_clientes.xaml</DependentUpon>
@@ -135,8 +120,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\pgnEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pgnOrdenes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\pgnEmpleados.xaml.cs">
+      <DependentUpon>pgnEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgnOrdenes.xaml.cs">
+      <DependentUpon>pgnOrdenes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -198,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\aguas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\cafe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
