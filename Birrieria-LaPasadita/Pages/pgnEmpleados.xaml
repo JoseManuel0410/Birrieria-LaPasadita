@@ -19,43 +19,114 @@
 
     <Grid>
 
-        <StackPanel>
+        <Frame x:Name="Main"
+               NavigationUIVisibility="Hidden" />
 
-            <WrapPanel Margin="0,30,0,0"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Top">
+        <Grid x:Name="grid_1">
 
-                <TextBox x:Name="txtNomEmpleado"
-                         VerticalAlignment="Top"
-                         materialDesign:HintAssist.Hint="Nombre del empleado"
-                         Width="210"
-                         materialDesign:TextFieldAssist.HasClearButton="True"
-                         Style="{StaticResource MaterialDesignFilledTextBox}" />
+            <StackPanel>
 
-                <ComboBox materialDesign:HintAssist.Hint="Ordenar por:"
-                          Margin="50,0,0,0"
-                          Width="210"
-                          materialDesign:TextFieldAssist.HasClearButton="True"
-                          Style="{StaticResource MaterialDesignFilledComboBox}">
-                    <ComboBoxItem Content="Alfabéticamente" />
-                    <ComboBoxItem Content="Cargo" />
-                    <ComboBoxItem Content="Sueldo" />
-                    <ComboBoxItem Content="Lada" />
-                </ComboBox>
+                <WrapPanel Margin="0,50,0,0"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top">
 
-                <ComboBox materialDesign:HintAssist.Hint="Estado"
-                          Margin="50,0,0,0"
-                          Width="210"
-                          materialDesign:TextFieldAssist.HasClearButton="True"
-                          Style="{StaticResource MaterialDesignFilledComboBox}">
-                    <ComboBoxItem Content="Activo" />
-                    <ComboBoxItem Content="Inactivo" />
-                </ComboBox>
+                    <TextBox x:Name="txtNomEmpleado"
+                             VerticalAlignment="Top"
+                             materialDesign:HintAssist.Hint="Nombre del empleado"
+                             Width="210"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             Style="{StaticResource MaterialDesignFilledTextBox}" />
 
-            </WrapPanel>
-            
-        </StackPanel>
+                    <ComboBox materialDesign:HintAssist.Hint="Ordenar por:"
+                              Margin="50,0,0,0"
+                              Width="210"
+                              materialDesign:TextFieldAssist.HasClearButton="True"
+                              Style="{StaticResource MaterialDesignFilledComboBox}">
+                        <ComboBoxItem Content="Alfabéticamente" />
+                        <ComboBoxItem Content="Cargo" />
+                        <ComboBoxItem Content="Sueldo" />
+                        <ComboBoxItem Content="Lada" />
+                    </ComboBox>
+
+                    <ComboBox materialDesign:HintAssist.Hint="Estado"
+                              Margin="50,0,0,0"
+                              Width="210"
+                              materialDesign:TextFieldAssist.HasClearButton="True"
+                              Style="{StaticResource MaterialDesignFilledComboBox}">
+                        <ComboBoxItem Content="Activo" />
+                        <ComboBoxItem Content="Inactivo" />
+                    </ComboBox>
+
+                </WrapPanel>
+
+                <Border BorderBrush="Gray"
+                        Margin="0,60"
+                        MaxHeight="300"
+                        Height="300"
+                        BorderThickness="2"
+                        HorizontalAlignment="Center">
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalAlignment="Center"
+                                  CanContentScroll="True"
+                                  Background="#FFD6D6D6">
+
+                        <ListView x:Name="lstEmpleados"
+                                  ItemsSource="{Binding Items1}"
+                                  HorizontalAlignment="Center"
+                                  Margin="20,0">
+
+                            <ListView.View>
+
+                                <GridView>
+
+                                    <GridViewColumn DisplayMemberBinding="{Binding ID}"
+                                                    Header="ID" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Productos}"
+                                                    Header="Nombre" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Precio_unitario}"
+                                                    Header="Cargo" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Cantidad}"
+                                                    Header="Sueldo" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Subtotal}"
+                                                    Header="Teléfono" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Subtotal}"
+                                                    Header="Dirección" />
+                                </GridView>
+
+                            </ListView.View>
+
+                        </ListView>
+
+                    </ScrollViewer>
+
+                </Border>
+
+                <WrapPanel HorizontalAlignment="Center"
+                           VerticalAlignment="Top">
+
+                    <Button x:Name="btnRegEmpleados"
+                            Content="Registrar empleados"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            Click="btnRegEmpleados_Click" />
+
+                    <Button x:Name="btnEliminarEmpleado"
+                            Content="Eliminar empleado"
+                            Margin="30,0,0,0"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            Click="btnEliminarEmpleado_Click" />
+
+                    <Button Content="Modificar empleados"
+                            Margin="30,0,0,0"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+
+                </WrapPanel>
+
+            </StackPanel>
+
+        </Grid>
 
     </Grid>
-    
+
 </Page>

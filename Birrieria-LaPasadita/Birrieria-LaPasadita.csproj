@@ -74,10 +74,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Formularios\frmempleados.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Formularios\frmregistro_clientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,9 +100,6 @@
     <Compile Include="Formularios\frmclientes.xaml.cs">
       <DependentUpon>frmclientes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmempleados.xaml.cs">
-      <DependentUpon>frmempleados.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmregistro_clientes.xaml.cs">
       <DependentUpon>frmregistro_clientes.xaml</DependentUpon>
     </Compile>
@@ -128,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\pgnRegistro_Empleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\pgnEmpleados.xaml.cs">
@@ -135,6 +132,9 @@
     </Compile>
     <Compile Include="Pages\pgnOrdenes.xaml.cs">
       <DependentUpon>pgnOrdenes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgnRegistro_Empleados.xaml.cs">
+      <DependentUpon>pgnRegistro_Empleados.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

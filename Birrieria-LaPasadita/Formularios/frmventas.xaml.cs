@@ -78,9 +78,6 @@ namespace Birrieria_LaPasadita.Formularios
 
         private void btnempleados_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmempleados x = new Formularios.frmempleados();
-            x.Show();
-            this.Close();
         }
 
         private void btnclientes_Click(object sender, RoutedEventArgs e)

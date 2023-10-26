@@ -12,94 +12,114 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Birrieria_LaPasadita.Formularios"
         mc:Ignorable="d"
-        Title="LA PASADITA" 
-        Height="720" 
+        Title="LA PASADITA"
+        Height="720"
         Width="1280"
         WindowStartupLocation="CenterScreen"
         Background="#FFE6E6E6"
         Icon="\Imagenes/Logo.png">
     <Grid>
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="4.6*"/>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4.6*" />
         </Grid.ColumnDefinitions>
-        
-        
+
+
         <!-- Inicio del Menú lateral -->
         <Grid Background="#FFBEBEBE">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="4.5*"/>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="4.5*" />
             </Grid.RowDefinitions>
             <WrapPanel HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                 <Image Source="\Imagenes/Usuario.png"
-                       Width="48" 
-                       Height="48" 
-                       Margin="0"/>
-                <TextBlock VerticalAlignment="Center" 
-                           x:Name="txtusuario" 
-                           Margin="5,20,0,20" 
+                       Width="48"
+                       Height="48"
+                       Margin="0" />
+                <TextBlock VerticalAlignment="Center"
+                           x:Name="txtusuario"
+                           Margin="5,20,0,20"
                            FontSize="19"
                            FontWeight="SemiBold"
-                           Text="Alberto"/>
+                           Text="Alberto" />
             </WrapPanel>
             <StackPanel Grid.Row="1">
                 <Button x:Name="btnordenes"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         FontSize="17"
                         Height="45"
-                        Margin="20,60,20,0" Click="btnordenes_Click">
+                        Margin="25,60,25,0"
+                        Click="btnordenes_Click">
                     <WrapPanel>
-                        <materialDesign:PackIcon Kind="FileSign" Width="25" Height="25"/>
-                        <TextBlock Text="ORDENES" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <materialDesign:PackIcon Kind="FileSign"
+                                                 Width="25"
+                                                 Height="25" />
+                        <TextBlock Text="ORDENES"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0" />
                     </WrapPanel>
                 </Button>
                 <Separator Margin="0,20"
-                           Background="{x:Null}"/>
+                           Background="{x:Null}" />
                 <Button x:Name="btnempleados"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         FontSize="17"
                         Height="45"
-                        Margin="20,0" 
+                        Margin="25,0"
                         Click="btnempleados_Click">
                     <WrapPanel>
-                        <materialDesign:PackIcon Kind="AccountGroup" Width="25" Height="25"/>
-                        <TextBlock Text="EMPLEADOS" VerticalAlignment="Center" Margin="10,0,0,0"/> 
+                        <materialDesign:PackIcon Kind="AccountGroup"
+                                                 Width="25"
+                                                 Height="25" />
+                        <TextBlock Text="EMPLEADOS"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0" />
                     </WrapPanel>
                 </Button>
                 <Separator Margin="0,20"
-                           Background="{x:Null}"/>
+                           Background="{x:Null}" />
                 <Button x:Name="btnventas"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         FontSize="17"
                         Height="45"
-                        Margin="20,0" 
+                        Margin="25,0"
                         Click="btnventas_Click">
                     <WrapPanel>
-                        <materialDesign:PackIcon Kind="Bank" Width="25" Height="25"/>
-                        <TextBlock Text="VENTAS" VerticalAlignment="Center" Margin="10,0,0,0"/> 
+                        <materialDesign:PackIcon Kind="Bank"
+                                                 Width="25"
+                                                 Height="25" />
+                        <TextBlock Text="VENTAS"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0" />
                     </WrapPanel>
                 </Button>
-                <Separator Margin="0,20" 
-                           Background="{x:Null}"/>
+                <Separator Margin="0,20"
+                           Background="{x:Null}" />
                 <Button x:Name="btnclientes"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         FontSize="17"
                         Height="45"
-                        Margin="20,0" 
+                        Margin="25,0"
                         Click="btnclientes_Click">
                     <WrapPanel>
-                        <Image Source="\Imagenes/cliente.png" Width="25" Height="25"/>
-                        <TextBlock Text="CLIENTES" VerticalAlignment="Center" Margin="10,0,0,0"/> 
+                        <Image Source="\Imagenes/cliente.png"
+                               Width="25"
+                               Height="25" />
+                        <TextBlock Text="CLIENTES"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0" />
                     </WrapPanel>
                 </Button>
             </StackPanel>
         </Grid>
         <!-- Cierre del Menú lateral -->
-        
+
         <!-- Inicio del Frame -->
-        <Frame x:Name="Main" Grid.Column="1"/>
+        <Frame x:Name="Main"
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden" />
         <!-- Cierre del Frame -->
     </Grid>
 </Window>

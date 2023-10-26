@@ -28,6 +28,8 @@ namespace Birrieria_LaPasadita.Formularios
         private void btnordenes_Click(object sender, RoutedEventArgs e)
         {
             btnempleados.IsEnabled = true;
+            btnventas.IsEnabled = true;
+            btnclientes.IsEnabled = true;
             Main.Content = new pgnOrdenes();
             btnordenes.IsEnabled = false;
         }
@@ -35,22 +37,20 @@ namespace Birrieria_LaPasadita.Formularios
         private void btnempleados_Click(object sender, RoutedEventArgs e)
         {
             btnordenes.IsEnabled = true;
+            btnventas.IsEnabled = true;
+            btnclientes.IsEnabled = true;
             Main.Content = new pgnEmpleados();
             btnempleados.IsEnabled = false;
         }
 
         private void btnventas_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmventas x = new Formularios.frmventas();
-            x.Show();
-            this.Close();
+
         }
 
         private void btnclientes_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmclientes x = new Formularios.frmclientes();
-            x.Show();
-            this.Close();
+
         }
     }
 }
