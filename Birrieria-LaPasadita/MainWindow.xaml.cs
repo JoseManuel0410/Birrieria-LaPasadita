@@ -27,7 +27,7 @@ namespace Birrieria_LaPasadita
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("DATA SOURCE=MATEBOOKABEL\\SQLEXPRESS; INITIAL CATALOG=BIRRIERIA; INTEGRATED SECURITY=TRUE");
+        SqlConnection con = new SqlConnection("DATA SOURCE=COMPUA\\SQLEXPRESS; INITIAL CATALOG=BIRRIERIA; INTEGRATED SECURITY=TRUE");
         private void btninicio_Click(object sender, RoutedEventArgs e)
         {
             con.Open();

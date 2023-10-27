@@ -94,6 +94,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Clases\clsConexion.cs" />
     <Compile Include="Formularios\frmbase.xaml.cs">
       <DependentUpon>frmbase.xaml</DependentUpon>
     </Compile>
