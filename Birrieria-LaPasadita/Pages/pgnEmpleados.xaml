@@ -63,6 +63,8 @@
                         Margin="0,60"
                         MaxHeight="300"
                         Height="300"
+                        Width="600"
+                        MaxWidth="600"
                         BorderThickness="2"
                         HorizontalAlignment="Center">
 
@@ -72,32 +74,10 @@
                                   CanContentScroll="True"
                                   Background="#FFD6D6D6">
 
-                        <ListView x:Name="lstEmpleados"
-                                  ItemsSource="{Binding Items1}"
+                        <DataGrid x:Name="dtgValores"
+                                  AutoGenerateColumns="True"
                                   HorizontalAlignment="Center"
-                                  Margin="20,0">
-
-                            <ListView.View>
-
-                                <GridView>
-
-                                    <GridViewColumn DisplayMemberBinding="{Binding ID}"
-                                                    Header="ID" />
-                                    <GridViewColumn DisplayMemberBinding="{Binding Productos}"
-                                                    Header="Nombre" />
-                                    <GridViewColumn DisplayMemberBinding="{Binding Precio_unitario}"
-                                                    Header="Cargo" />
-                                    <GridViewColumn DisplayMemberBinding="{Binding Cantidad}"
-                                                    Header="Sueldo" />
-                                    <GridViewColumn DisplayMemberBinding="{Binding Subtotal}"
-                                                    Header="Teléfono" />
-                                    <GridViewColumn DisplayMemberBinding="{Binding Subtotal}"
-                                                    Header="Dirección" />
-                                </GridView>
-
-                            </ListView.View>
-
-                        </ListView>
+                                  AutoGeneratingColumn="dtgValores_AutoGeneratingColumn" />
 
                     </ScrollViewer>
 

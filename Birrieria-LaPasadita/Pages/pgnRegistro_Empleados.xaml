@@ -40,39 +40,22 @@
 
                     <WrapPanel>
 
-                        <TextBlock Text="ID"
+                        <TextBlock Text="NOMBRE"
                                    Width="160"
                                    FontWeight="Bold"
                                    VerticalAlignment="Center"
                                    Margin="0,0,20,0" />
 
-                        <TextBox x:Name="txtID"
+                        <TextBox x:Name="txtNombre"
                                  VerticalAlignment="Top"
-                                 materialDesign:HintAssist.Hint="Ingresa el ID"
+                                 materialDesign:HintAssist.Hint="Ingresa el nombre"
                                  Width="210"
                                  materialDesign:TextFieldAssist.HasClearButton="True"
                                  Style="{StaticResource MaterialDesignFilledTextBox}" />
 
                     </WrapPanel>
 
-                    <WrapPanel Margin="0,40,0,20">
-
-                        <TextBlock Text="APELLIDO PATERNO"
-                                   Width="160"
-                                   FontWeight="Bold"
-                                   VerticalAlignment="Center"
-                                   Margin="0,0,20,0" />
-
-                        <TextBox x:Name="txtApellidoPat"
-                                 VerticalAlignment="Top"
-                                 materialDesign:HintAssist.Hint="Ingresa el apellido"
-                                 Width="210"
-                                 materialDesign:TextFieldAssist.HasClearButton="True"
-                                 Style="{StaticResource MaterialDesignFilledTextBox}" />
-
-                    </WrapPanel>
-
-                    <WrapPanel Margin="0,20">
+                    <WrapPanel Margin="0,40,0,0">
 
                         <TextBlock Text="TELÉFONO"
                                    Width="160"
@@ -89,7 +72,7 @@
 
                     </WrapPanel>
 
-                    <WrapPanel Margin="0,20,0,0">
+                    <WrapPanel Margin="0,40,0,0">
 
                         <TextBlock Text="SUELDO MENSUAL"
                                    Width="160"
@@ -106,6 +89,23 @@
 
                     </WrapPanel>
 
+                    <WrapPanel Margin="0,40,0,0">
+
+                        <TextBlock Text="DIRECCIÓN"
+                                   Width="160"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,20,0" />
+
+                        <TextBox x:Name="txtDireccion"
+                                 VerticalAlignment="Top"
+                                 materialDesign:HintAssist.Hint="Ingresa el direccion"
+                                 Width="210"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 Style="{StaticResource MaterialDesignFilledTextBox}" />
+
+                    </WrapPanel>
+
                 </StackPanel>
 
                 <StackPanel Grid.Column="1"
@@ -113,22 +113,22 @@
 
                     <WrapPanel>
 
-                        <TextBlock Text="NOMBRE"
+                        <TextBlock Text="APELLIDO PATERNO"
                                    Width="160"
                                    FontWeight="Bold"
                                    VerticalAlignment="Center"
                                    Margin="0,0,20,0" />
 
-                        <TextBox x:Name="txtNombre"
+                        <TextBox x:Name="txtApellidoPat"
                                  VerticalAlignment="Top"
-                                 materialDesign:HintAssist.Hint="Ingresa el nombre"
+                                 materialDesign:HintAssist.Hint="Ingresa el apellido"
                                  Width="210"
                                  materialDesign:TextFieldAssist.HasClearButton="True"
                                  Style="{StaticResource MaterialDesignFilledTextBox}" />
 
                     </WrapPanel>
 
-                    <WrapPanel Margin="0,40,0,20">
+                    <WrapPanel Margin="0,40,0,0">
 
                         <TextBlock Text="APELLIDO MATERNO"
                                    Width="160"
@@ -145,7 +145,7 @@
 
                     </WrapPanel>
 
-                    <WrapPanel Margin="0,20">
+                    <WrapPanel Margin="0,40,0,0">
 
                         <TextBlock Text="CARGO"
                                    Width="160"
@@ -165,22 +165,7 @@
 
                     </WrapPanel>
 
-                    <WrapPanel Margin="0,20,0,0">
-
-                        <TextBlock Text="DIRECCIÓN"
-                                   Width="160"
-                                   FontWeight="Bold"
-                                   VerticalAlignment="Center"
-                                   Margin="0,0,20,0" />
-
-                        <TextBox x:Name="txtDireccion"
-                                 VerticalAlignment="Top"
-                                 materialDesign:HintAssist.Hint="Ingresa el direccion"
-                                 Width="210"
-                                 materialDesign:TextFieldAssist.HasClearButton="True"
-                                 Style="{StaticResource MaterialDesignFilledTextBox}" />
-
-                    </WrapPanel>
+                    
 
                 </StackPanel>
 

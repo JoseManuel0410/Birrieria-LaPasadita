@@ -74,14 +74,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Formularios\frmregistro_clientes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Formularios\frmregistro_empleados.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Formularios\frmventas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,17 +87,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Clases\clsConexion.cs" />
+    <Compile Include="Clases\clsEmpleado.cs" />
+    <Compile Include="Clases\GetDataBase.cs" />
     <Compile Include="Formularios\frmbase.xaml.cs">
       <DependentUpon>frmbase.xaml</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmclientes.xaml.cs">
       <DependentUpon>frmclientes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmregistro_clientes.xaml.cs">
-      <DependentUpon>frmregistro_clientes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmregistro_empleados.xaml.cs">
-      <DependentUpon>frmregistro_empleados.xaml</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmventas.xaml.cs">
       <DependentUpon>frmventas.xaml</DependentUpon>
@@ -126,6 +114,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\pgnVentas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\pgnEmpleados.xaml.cs">
@@ -136,6 +128,9 @@
     </Compile>
     <Compile Include="Pages\pgnRegistro_Empleados.xaml.cs">
       <DependentUpon>pgnRegistro_Empleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgnVentas.xaml.cs">
+      <DependentUpon>pgnVentas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

@@ -29,11 +29,9 @@ namespace Birrieria_LaPasadita.Pages
         private void btnRegEmpleados_Click(object sender, RoutedEventArgs e)
         {
             Guardar();
-
         }
         private void Guardar()
         {
-            //string selectedCargo = cbxCargo.SelectedItem.ToString();
             if ( txtNombre.Text == "" || txtApellidoPat.Text == "" || txtApellidoMat.Text == "" || txtApellidoMat.Text == "" || txtTelefono.Text == "" || txtSueldo.Text == "" || txtDireccion.Text == "")
             {
                 MessageBox.Show("Para poder registrar este empleado debes ingresar todos los datos", "Registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -48,7 +46,6 @@ namespace Birrieria_LaPasadita.Pages
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-                txtID.Clear();
                 txtNombre.Clear();
                 txtApellidoPat.Clear();
                 txtApellidoMat.Clear();

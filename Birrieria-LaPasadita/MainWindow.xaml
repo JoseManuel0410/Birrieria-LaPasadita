@@ -21,7 +21,7 @@
         ResizeMode="CanMinimize">
 
     <!-- FONDO DEL FORMULARIO -->
-    <Grid Background="#FF1F1F1F">
+    <Grid Background="#FFE6E6E6">
 
         <!-- VENTANA DE LOGIN -->
         <Grid Margin="180,50,180,50"
@@ -40,7 +40,7 @@
 
             <!-- LOGO DEL NEGOCIO -->
             <StackPanel Grid.Column="0"
-                        Background="#FF323232">
+                        Background="#FF455A64">
                 <Image HorizontalAlignment="Center"
                        Margin="50,50,50,60"
                        Source="\Imagenes/Logo.png"
@@ -62,7 +62,7 @@
 
             <!-- LOGIN -->
             <StackPanel Grid.Column="1"
-                        Background="Gray">
+                        Background="WhiteSmoke">
                 <TextBlock HorizontalAlignment="Right"
                            VerticalAlignment="Top"
                            Margin="0,50,125,0"
@@ -100,19 +100,13 @@
                          Cursor=""
                          CaretBrush="Black"
                          BorderBrush="#89000000" />
-                <Button x:Name="btninicio"
-                        Height="40"
-                        Width="250"
-                        FontSize="17"
-                        Background="#FF323232"
-                        BorderBrush="Silver"
-                        materialDesign:ButtonAssist.CornerRadius="10"
-                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                        ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
-                        Click="btninicio_Click">
-                    <TextBlock Text="Iniciar Sesión" />
-                </Button>
+                
+                    <Button x:Name="btnRegEmpleados"
+                            Width="250"
+                            Content="Iniciar Sesión"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            Click="btninicio_Click" />
+                
             </StackPanel>
         </Grid>
     </Grid>

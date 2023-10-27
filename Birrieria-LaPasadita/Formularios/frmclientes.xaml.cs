@@ -40,9 +40,6 @@ namespace Birrieria_LaPasadita.Formularios
 
         private void btnRegistroCliente_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmregistro_clientes x = new Formularios.frmregistro_clientes();
-            x.Show();
-            this.Close();
         }
 
         private void btnEliminarCliente_Click(object sender, RoutedEventArgs e)

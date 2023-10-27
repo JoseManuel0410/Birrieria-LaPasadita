@@ -52,7 +52,6 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\bin\Debug\Micr
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.csproj.AssemblyReference.cache
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmclientes.g.cs
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_clientes.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_empleados.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmventas.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\MainWindow.g.cs
@@ -61,7 +60,6 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birr
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita_MarkupCompile.lref
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\App.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmclientes.baml
-C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_clientes.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmregistro_empleados.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Formularios\frmventas.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\MainWindow.baml
@@ -121,3 +119,5 @@ C:\Git\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.csproj.CoreCompileInp
 C:\Git\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.csproj.CopyComplete
 C:\Git\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.exe
 C:\Git\Birrieria-LaPasadita\obj\Debug\Birrieria-LaPasadita.pdb
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnVentas.g.cs
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnVentas.baml
