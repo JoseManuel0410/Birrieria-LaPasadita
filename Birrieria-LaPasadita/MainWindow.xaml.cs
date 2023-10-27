@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Birrieria_LaPasadita.Formularios;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -25,12 +27,26 @@ namespace Birrieria_LaPasadita
         {
             InitializeComponent();
         }
-
+        SqlConnection con = new SqlConnection("DATA SOURCE=MATEBOOKABEL\\SQLEXPRESS; INITIAL CATALOG=BIRRIERIA; INTEGRATED SECURITY=TRUE");
         private void btninicio_Click(object sender, RoutedEventArgs e)
         {
-            Formularios.frmbase x = new Formularios.frmbase();
-            x.Show();
-            this.Close();
+            con.Open();
+            string consulta = "select * from USUARIO where usu_contrasena= '" + txtcontraseña.Text + "' and usu_nombre='" + txtusuario.Text + "'";
+            SqlCommand comando = new SqlCommand(consulta, con);
+            SqlDataReader lector;
+            lector = comando.ExecuteReader();
+
+            if (lector.HasRows == true)
+            {
+                frmbase frmbase = new frmbase();
+                frmbase.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrectos");
+            }
+            con.Close();
         }
     }
 }
