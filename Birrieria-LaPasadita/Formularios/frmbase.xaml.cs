@@ -50,7 +50,11 @@ namespace Birrieria_LaPasadita.Formularios
 
         private void btnclientes_Click(object sender, RoutedEventArgs e)
         {
-
+            btnordenes.IsEnabled = true;
+            btnempleados.IsEnabled = true;
+            btnventas.IsEnabled= true;
+            Main.Content = new pgnClientes();
+            btnclientes.IsEnabled = false;
         }
     }
 }

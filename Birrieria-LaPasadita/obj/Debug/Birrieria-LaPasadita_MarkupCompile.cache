@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Git\Birrieria-LaPasadita\obj\Debug\
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\
 Birrieria_LaPasadita
 none
 false
 DEBUG;TRACE
-C:\Git\Birrieria-LaPasadita\App.xaml
-8929716571
+C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\App.xaml
+9-1336086985
 
-151257387787
-161588587067
-Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnEmpleados.xaml;Pages\pgnOrdenes.xaml;Pages\pgnRegistro_Empleados.xaml;Pages\pgnVentas.xaml;
+16403592139
+161510885183
+Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnClientes.xaml;Pages\pgnEmpleados.xaml;Pages\pgnOrdenes.xaml;Pages\pgnRegistro_Empleados.xaml;Pages\pgnVentas.xaml;
 
 False
 

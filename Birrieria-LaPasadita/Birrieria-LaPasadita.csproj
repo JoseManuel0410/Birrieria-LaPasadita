@@ -102,11 +102,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\pgnClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\pgnEmpleados.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\pgnOrdenes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pgnRegistro_Clientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,11 +128,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\pgnClientes.xaml.cs">
+      <DependentUpon>pgnClientes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\pgnEmpleados.xaml.cs">
       <DependentUpon>pgnEmpleados.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\pgnOrdenes.xaml.cs">
       <DependentUpon>pgnOrdenes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgnRegistro_Clientes.xaml.cs">
+      <DependentUpon>pgnRegistro_Clientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\pgnRegistro_Empleados.xaml.cs">
       <DependentUpon>pgnRegistro_Empleados.xaml</DependentUpon>
