@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,12 +34,39 @@ namespace Birrieria_LaPasadita.Pages
 
         private void btnEliminarEmpleado_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Esta seguro que desea eliminar este empleado", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            switch (result)
+            Eliminar();
+        }
+
+        private void Eliminar()
+        {
+            if (string.IsNullOrEmpty(txtNomEmpleado.Text))
+
             {
-                case MessageBoxResult.Yes:
-                    MessageBox.Show("Empleado eliminado", "Elimnar", MessageBoxButton.OK, MessageBoxImage.Information);
-                    break;
+                MessageBox.Show("Para poder eliminar este empleado debes ingresar el codigo", "Registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Esta seguro que desea eliminar este empleado", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        SqlConnection con = new SqlConnection(clsconexion.Conectar());
+                        SqlCommand cmd = new SqlCommand("", con);
+
+                        con.Open();
+                        cmd.CommandText = "DELETE FROM EMPLEADO WHERE emp_id = '" + txtNomEmpleado.Text + "'";
+                        cmd.ExecuteNonQuery();
+
+                        con.Close();
+                        MessageBox.Show("Empleado eliminado", "Eliminar", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        break;
+
+
+                }
+                
+
+
             }
         }
 

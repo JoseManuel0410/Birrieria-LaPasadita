@@ -55,5 +55,7 @@ namespace Birrieria_LaPasadita.Pages
                 MessageBox.Show("Empleado registrado");
             }
         }
+
+
     }
 }
