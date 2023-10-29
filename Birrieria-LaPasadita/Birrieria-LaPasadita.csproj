@@ -110,6 +110,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\pgnModificar_Empleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\pgnOrdenes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -133,6 +137,9 @@
     </Compile>
     <Compile Include="Pages\pgnEmpleados.xaml.cs">
       <DependentUpon>pgnEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgnModificar_Empleados.xaml.cs">
+      <DependentUpon>pgnModificar_Empleados.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\pgnOrdenes.xaml.cs">
       <DependentUpon>pgnOrdenes.xaml</DependentUpon>

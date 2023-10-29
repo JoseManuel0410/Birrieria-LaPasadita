@@ -9,12 +9,21 @@ Birrieria_LaPasadita
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\App.xaml
 9-1336086985
 
 16403592139
 161510885183
 Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnClientes.xaml;Pages\pgnEmpleados.xaml;Pages\pgnOrdenes.xaml;Pages\pgnRegistro_Empleados.xaml;Pages\pgnVentas.xaml;
+=======
+C:\Git\Birrieria-LaPasadita\App.xaml
+9-736351893
+
+16-745856029
+161588587067
+Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnEmpleados.xaml;Pages\pgnModificar_Empleados.xaml;Pages\pgnOrdenes.xaml;Pages\pgnRegistro_Empleados.xaml;Pages\pgnVentas.xaml;
+>>>>>>> eeeac3fd26c0daf050bd323d14cc3f90babd9516
 
 False
 

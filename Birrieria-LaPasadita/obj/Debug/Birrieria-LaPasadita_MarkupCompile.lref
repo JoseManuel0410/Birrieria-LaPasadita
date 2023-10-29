@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\App.xaml;;
 FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\Formularios\frmbase.xaml;;
 FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\Formularios\frmclientes.xaml;;
@@ -9,4 +10,16 @@ FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\Pages\pgnEmpl
 FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\Pages\pgnOrdenes.xaml;;
 FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\Pages\pgnRegistro_Empleados.xaml;;
 FC:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\Pages\pgnVentas.xaml;;
+=======
+FC:\Git\Birrieria-LaPasadita\App.xaml;;
+FC:\Git\Birrieria-LaPasadita\Formularios\frmbase.xaml;;
+FC:\Git\Birrieria-LaPasadita\Formularios\frmclientes.xaml;;
+FC:\Git\Birrieria-LaPasadita\Formularios\frmventas.xaml;;
+FC:\Git\Birrieria-LaPasadita\MainWindow.xaml;;
+FC:\Git\Birrieria-LaPasadita\Pages\pgnEmpleados.xaml;;
+FC:\Git\Birrieria-LaPasadita\Pages\pgnOrdenes.xaml;;
+FC:\Git\Birrieria-LaPasadita\Pages\pgnRegistro_Empleados.xaml;;
+FC:\Git\Birrieria-LaPasadita\Pages\pgnVentas.xaml;;
+FC:\Git\Birrieria-LaPasadita\Pages\pgnModificar_Empleados.xaml;;
+>>>>>>> eeeac3fd26c0daf050bd323d14cc3f90babd9516
 

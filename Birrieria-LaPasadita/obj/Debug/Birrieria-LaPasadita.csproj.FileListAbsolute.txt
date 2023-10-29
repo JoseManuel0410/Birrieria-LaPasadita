@@ -117,5 +117,10 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Page
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnVentas.baml
 C:\Git\Birrieria-LaPasadita\obj\Debug\Pages\pgnVentas.g.cs
 C:\Git\Birrieria-LaPasadita\obj\Debug\Pages\pgnVentas.baml
+<<<<<<< HEAD
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnClientes.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnClientes.baml
+=======
+C:\Git\Birrieria-LaPasadita\obj\Debug\Pages\pgnModificar_Empleados.g.cs
+C:\Git\Birrieria-LaPasadita\obj\Debug\Pages\pgnModificar_Empleados.baml
+>>>>>>> eeeac3fd26c0daf050bd323d14cc3f90babd9516
