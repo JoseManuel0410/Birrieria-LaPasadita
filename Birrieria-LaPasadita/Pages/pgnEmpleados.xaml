@@ -30,6 +30,14 @@
                            HorizontalAlignment="Center"
                            VerticalAlignment="Top">
 
+                    <TextBox x:Name="txtCodEmpleado"
+                             Margin="0,0,50,0"
+                             VerticalAlignment="Top"
+                             materialDesign:HintAssist.Hint="Codigo del empleado"
+                             Width="210"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             Style="{StaticResource MaterialDesignFilledTextBox}" />
+
                     <TextBox x:Name="txtNomEmpleado"
                              VerticalAlignment="Top"
                              materialDesign:HintAssist.Hint="Nombre del empleado"

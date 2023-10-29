@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Birrieria_LaPasadita.Clases;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,36 @@ namespace Birrieria_LaPasadita.Pages
         public pgnRegistro_Clientes()
         {
             InitializeComponent();
+        }
+
+        private void btnRegClientes_Click(object sender, RoutedEventArgs e)
+        {
+            Guardar();
+        }
+
+        private void Guardar()
+        {
+            if (txtNombre.Text == "" || txtApellidoPat.Text == "" || txtApellidoMat.Text == ""  || txtTelefono.Text == ""  || txtDireccion.Text == "")
+            {
+                MessageBox.Show("Para poder registrar este cliente debes ingresar todos los datos", "Registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(clsconexion.Conectar());
+                SqlCommand cmd = new SqlCommand("", con);
+
+                con.Open();
+                cmd.CommandText = "INSERT INTO CLIENTE(cli_nombre,cli_apellidop,cli_apellidom,cli_telefono,cli_domicilio)VALUES('" + txtNombre.Text + "','" + txtApellidoPat.Text + "','" + txtApellidoMat.Text + "','" + txtTelefono.Text + "','" + txtDireccion.Text + "')";
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+                txtNombre.Clear();
+                txtApellidoPat.Clear();
+                txtApellidoMat.Clear();
+                txtTelefono.Clear();
+                txtDireccion.Clear();
+                MessageBox.Show("Cliente registrado");
+            }
         }
     }
 }

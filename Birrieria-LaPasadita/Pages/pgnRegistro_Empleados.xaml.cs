@@ -1,4 +1,5 @@
 ﻿using Birrieria_LaPasadita.Clases;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -55,7 +56,6 @@ namespace Birrieria_LaPasadita.Pages
                 MessageBox.Show("Empleado registrado");
             }
         }
-
 
     }
 }

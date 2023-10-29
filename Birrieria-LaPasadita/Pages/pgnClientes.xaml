@@ -29,6 +29,14 @@
                            HorizontalAlignment="Center"
                            VerticalAlignment="Top">
 
+                    <TextBox x:Name="txtCodCliente"
+                             Margin="0,0,50,0"
+                             VerticalAlignment="Top"
+                             materialDesign:HintAssist.Hint="Codigo del cliente"
+                             Width="210"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             Style="{StaticResource MaterialDesignFilledTextBox}" />
+
                     <TextBox x:Name="txtNomCliente"
                              VerticalAlignment="Top"
                              materialDesign:HintAssist.Hint="Nombre del cliente"

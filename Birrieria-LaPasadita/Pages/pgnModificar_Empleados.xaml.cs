@@ -24,5 +24,7 @@ namespace Birrieria_LaPasadita.Pages
         {
             InitializeComponent();
         }
+
+
     }
 }

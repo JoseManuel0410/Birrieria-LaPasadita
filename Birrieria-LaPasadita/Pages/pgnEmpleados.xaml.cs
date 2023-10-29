@@ -39,7 +39,7 @@ namespace Birrieria_LaPasadita.Pages
 
         private void Eliminar()
         {
-            if (string.IsNullOrEmpty(txtNomEmpleado.Text))
+            if (string.IsNullOrEmpty(txtCodEmpleado.Text))
 
             {
                 MessageBox.Show("Para poder eliminar este empleado debes ingresar el codigo", "Registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -54,7 +54,7 @@ namespace Birrieria_LaPasadita.Pages
                         SqlCommand cmd = new SqlCommand("", con);
 
                         con.Open();
-                        cmd.CommandText = "DELETE FROM EMPLEADO WHERE emp_id = '" + txtNomEmpleado.Text + "'";
+                        cmd.CommandText = "DELETE FROM EMPLEADO WHERE emp_id = '" + txtCodEmpleado.Text + "'";
                         cmd.ExecuteNonQuery();
 
                         con.Close();
@@ -113,5 +113,6 @@ namespace Birrieria_LaPasadita.Pages
             grid_1.Visibility = Visibility.Collapsed;
             Main.Content = new pgnModificar_Empleados();
         }
+
     }
 }

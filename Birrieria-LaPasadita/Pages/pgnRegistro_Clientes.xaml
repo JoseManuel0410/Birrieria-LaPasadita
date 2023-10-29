@@ -20,7 +20,7 @@
 
         <StackPanel>
 
-            <TextBlock Text="Registro de empleados"
+            <TextBlock Text="Registro de clientes"
                        VerticalAlignment="Top"
                        HorizontalAlignment="Center"
                        FontSize="25"
@@ -138,8 +138,7 @@
 
                 <Button x:Name="btnRegClientes"
                         Content="Registrar Cliente"
-                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                        Click="btnRegEmpleados_Click" />
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnRegClientes_Click" />
 
                 <Button Content="Cancelar"
                         Margin="50,0,0,0"
