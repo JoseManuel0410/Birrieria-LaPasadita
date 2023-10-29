@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Git\Birrieria-LaPasadita\App.xaml
-8929716571
+9-736351893
 
-16-1115801388
+171175922092
 161588587067
-Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnEmpleados.xaml;Pages\pgnOrdenes.xaml;Pages\pgnRegistro_Empleados.xaml;Pages\pgnVentas.xaml;
+Formularios\frmbase.xaml;Formularios\frmclientes.xaml;Formularios\frmventas.xaml;MainWindow.xaml;Pages\pgnEmpleados.xaml;Pages\pgnModificar_Empleados.xaml;Pages\pgnOrdenes.xaml;Pages\pgnRegistro_Empleados.xaml;Pages\pgnVentas.xaml;
 
 True
 

@@ -97,9 +97,10 @@
                             Style="{StaticResource MaterialDesignRaisedDarkButton}"
                             Click="btnEliminarEmpleado_Click" />
 
-                    <Button Content="Modificar empleados"
+                    <Button x:Name="btnModificarEmpleado"
+                            Content="Modificar empleados"
                             Margin="30,0,0,0"
-                            Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnModificarEmpleado_Click" />
 
                 </WrapPanel>
 

@@ -107,5 +107,11 @@ namespace Birrieria_LaPasadita.Pages
                     break;
             }
         }
+
+        private void btnModificarEmpleado_Click(object sender, RoutedEventArgs e)
+        {
+            grid_1.Visibility = Visibility.Collapsed;
+            Main.Content = new pgnModificar_Empleados();
+        }
     }
 }
