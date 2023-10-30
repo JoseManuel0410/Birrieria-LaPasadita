@@ -61,12 +61,7 @@ namespace Birrieria_LaPasadita.Pages
                         MessageBox.Show("Empleado eliminado", "Eliminar", MessageBoxButton.OK, MessageBoxImage.Information);
 
                         break;
-
-
                 }
-                
-
-
             }
         }
 
@@ -78,7 +73,7 @@ namespace Birrieria_LaPasadita.Pages
 
         private void dtgValores_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
-            string headerName = e.PropertyName; // Obtén el nombre de la columna
+            string headerName = e.PropertyName;
             switch (headerName)
             {
                 case "emp_id":
@@ -103,7 +98,6 @@ namespace Birrieria_LaPasadita.Pages
                     e.Column.Header = "Cargo";
                     break;
                 default:
-                    // Puedes proporcionar alias predeterminados o dejar el nombre original.
                     break;
             }
         }

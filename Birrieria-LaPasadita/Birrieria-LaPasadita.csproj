@@ -70,14 +70,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Formularios\frmclientes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Formularios\frmventas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,12 +85,6 @@
     <Compile Include="Formularios\frmbase.xaml.cs">
       <DependentUpon>frmbase.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmclientes.xaml.cs">
-      <DependentUpon>frmclientes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmventas.xaml.cs">
-      <DependentUpon>frmventas.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -108,6 +94,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\pgnEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pgnModificar_Clientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +128,9 @@
     </Compile>
     <Compile Include="Pages\pgnEmpleados.xaml.cs">
       <DependentUpon>pgnEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgnModificar_Clientes.xaml.cs">
+      <DependentUpon>pgnModificar_Clientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\pgnModificar_Empleados.xaml.cs">
       <DependentUpon>pgnModificar_Empleados.xaml</DependentUpon>

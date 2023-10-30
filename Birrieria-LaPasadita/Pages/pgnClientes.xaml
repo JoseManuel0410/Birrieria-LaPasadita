@@ -85,17 +85,19 @@
                     <Button x:Name="btnRegCliente"
                             Content="Registrar cliente"
                             Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                            Click="btnRegEmpleados_Click" />
+                            Click="btnRegCliente_Click" />
 
                     <Button x:Name="btnEliminarCliente"
                             Content="Eliminar cliente"
                             Margin="30,0,0,0"
                             Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                            Click="btnEliminarEmpleado_Click" />
+                            Click="btnEliminarCliente_Click" />
 
-                    <Button Content="Modificar cliente"
+                    <Button x:Name="btnModificarCliente"
+                            Content="Modificar cliente"
                             Margin="30,0,0,0"
-                            Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            Click="btnModificarCliente_Click" />
 
                 </WrapPanel>
 

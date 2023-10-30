@@ -18,20 +18,20 @@ using System.Windows.Shapes;
 namespace Birrieria_LaPasadita.Pages
 {
     /// <summary>
-    /// Lógica de interacción para pgnModificar_Empleados.xaml
+    /// Lógica de interacción para pgnModificar_Clientes.xaml
     /// </summary>
-    public partial class pgnModificar_Empleados : Page
+    public partial class pgnModificar_Clientes : Page
     {
-        public pgnModificar_Empleados()
+        public pgnModificar_Clientes()
         {
             InitializeComponent();
         }
 
-        private void btnModEmpleados_Click(object sender, RoutedEventArgs e)
+        private void btnModCliente_Click(object sender, RoutedEventArgs e)
         {
-            if (txtID.Text == "" || txtNombre.Text == "" || txtApellidoPat.Text == "" || txtApellidoMat.Text == "" || txtApellidoMat.Text == "" || txtTelefono.Text == "" || txtSueldo.Text == "" || txtDireccion.Text == "")
+            if (txtID.Text == "" || txtNombre.Text == "" || txtApellidoPat.Text == "" || txtApellidoMat.Text == "" || txtApellidoMat.Text == "" || txtTelefono.Text == "" || txtDireccion.Text == "")
             {
-                MessageBox.Show("Para poder modificar este empleado debes ingresar todos los datos", "Modificar", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Para poder modificar este cliente debes ingresar todos los datos", "Modificar", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -39,7 +39,7 @@ namespace Birrieria_LaPasadita.Pages
                 SqlCommand cmd = new SqlCommand("", con);
 
                 con.Open();
-                cmd.CommandText = "UPDATE EMPLEADO SET emp_nombre = '" + txtNombre.Text + "', emp_apellidop = '" + txtApellidoPat.Text + "', emp_apellidom = '" + txtApellidoMat.Text + "', emp_telefono = '" + txtTelefono.Text + "', emp_direccion = '" + txtDireccion.Text + "' WHERE emp_id = " + txtID.Text + "";
+                cmd.CommandText = "UPDATE CLIENTE SET cli_nombre = '" + txtNombre.Text + "', cli_apellidop = '" + txtApellidoPat.Text + "', cli_apellidom = '" + txtApellidoMat.Text + "', cli_telefono = '" + txtTelefono.Text + "', cli_domicilio = '" + txtDireccion.Text + "' WHERE cli_id = " + txtID.Text + "";
                 cmd.ExecuteNonQuery();
 
                 con.Close();
@@ -48,9 +48,8 @@ namespace Birrieria_LaPasadita.Pages
                 txtApellidoPat.Clear();
                 txtApellidoMat.Clear();
                 txtTelefono.Clear();
-                txtSueldo.Clear();
                 txtDireccion.Clear();
-                MessageBox.Show("Empleado modificado");
+                MessageBox.Show("Cliente modificado");
             }
         }
     }
