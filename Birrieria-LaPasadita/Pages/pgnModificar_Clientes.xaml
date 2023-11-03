@@ -16,7 +16,12 @@
       d:DesignWidth="1050"
       Background="#FFE6E6E6">
     <Grid>
-        <StackPanel>
+
+        <Frame x:Name="Maint"
+            NavigationUIVisibility="Hidden" />
+
+        <Grid x:Name="grid2">
+            <StackPanel>
 
             <TextBlock Text="Modificar Cliente"
                        VerticalAlignment="Top"
@@ -154,13 +159,14 @@
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         Click="btnModCliente_Click" />
 
-                <Button Content="Cancelar"
+                <Button x:Name="btnCancelar" Content="Cancelar"
                         Margin="50,0,0,0"
-                        Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnCancelar_Click" />
 
             </WrapPanel>
 
         </StackPanel>
+        </Grid>
 
     </Grid>
 

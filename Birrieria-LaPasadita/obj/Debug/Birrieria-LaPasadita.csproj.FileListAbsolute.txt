@@ -134,3 +134,5 @@ C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Page
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnRegistro_Clientes.baml
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnModificar_Clientes.g.cs
 C:\Users\Jose\workspace\Birrieria-LaPasadita\Birrieria-LaPasadita\obj\Debug\Pages\pgnModificar_Clientes.baml
+C:\Git\Birrieria-LaPasadita\obj\Debug\Pages\pgnModificar_Clientes.g.cs
+C:\Git\Birrieria-LaPasadita\obj\Debug\Pages\pgnModificar_Clientes.baml

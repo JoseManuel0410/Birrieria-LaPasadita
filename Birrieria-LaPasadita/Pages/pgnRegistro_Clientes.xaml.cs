@@ -56,5 +56,11 @@ namespace Birrieria_LaPasadita.Pages
                 MessageBox.Show("Cliente registrado");
             }
         }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            grid2.Visibility = Visibility.Collapsed;
+            Maint.Content = new pgnClientes();
+        }
     }
 }
