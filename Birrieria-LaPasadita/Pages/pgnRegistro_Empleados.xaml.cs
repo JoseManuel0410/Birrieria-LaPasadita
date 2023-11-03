@@ -2,6 +2,7 @@
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -26,14 +27,23 @@ namespace Birrieria_LaPasadita.Pages
         public pgnRegistro_Empleados()
         {
             InitializeComponent();
+            LlenarComboBoxCargos();
         }
         private void btnRegEmpleados_Click(object sender, RoutedEventArgs e)
         {
-            Guardar();
+            if (cbxCargo.SelectedItem is clsCargo cargoSeleccionado)
+            {
+                int cargoId = cargoSeleccionado.car_id; // Obtén el ID del cargo seleccionado.
+                Guardar(cargoId); // Llama al método Guardar con el ID del cargo.
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un cargo válido", "Registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
-        private void Guardar()
+        private void Guardar(int cargoId)
         {
-            if ( txtNombre.Text == "" || txtApellidoPat.Text == "" || txtApellidoMat.Text == "" || txtApellidoMat.Text == "" || txtTelefono.Text == "" || txtSueldo.Text == "" || txtDireccion.Text == "")
+            if (txtNombre.Text == "" || txtApellidoPat.Text == "" || txtApellidoMat.Text == "" || txtTelefono.Text == "" || txtSueldo.Text == "" || txtDireccion.Text == "")
             {
                 MessageBox.Show("Para poder registrar este empleado debes ingresar todos los datos", "Registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
@@ -43,7 +53,7 @@ namespace Birrieria_LaPasadita.Pages
                 SqlCommand cmd = new SqlCommand("", con);
 
                 con.Open();
-                cmd.CommandText = "INSERT INTO EMPLEADO(emp_nombre,emp_apellidop,emp_apellidom,emp_telefono,emp_direccion)VALUES('" + txtNombre.Text + "','" + txtApellidoPat.Text + "','" + txtApellidoMat.Text + "','" + txtTelefono.Text + "','" + txtDireccion.Text + "')";
+                cmd.CommandText = "INSERT INTO EMPLEADO(emp_nombre, emp_apellidop, emp_apellidom, emp_telefono, emp_direccion, emp_cargo) " + "VALUES('" + txtNombre.Text + "','" + txtApellidoPat.Text + "','" + txtApellidoMat.Text + "','" + txtTelefono.Text + "','" + txtDireccion.Text + "','" + cargoId + "')";
                 cmd.ExecuteNonQuery();
 
                 con.Close();
@@ -61,6 +71,34 @@ namespace Birrieria_LaPasadita.Pages
         {
             grid2.Visibility = Visibility.Collapsed;
             Maint.Content = new pgnEmpleados();
+        }
+
+        private List<clsCargo> ObtenerCargosDesdeBaseDeDatos()
+        {
+            List<clsCargo> cargos = new List<clsCargo>();
+
+            using (SqlConnection con = new SqlConnection(clsconexion.Conectar()))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT car_id, car_nombre FROM CARGO", con))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string nombre = reader.GetString(1);
+                        cargos.Add(new clsCargo { car_id = id, car_nombre = nombre });
+                    }
+                }
+            }
+
+            return cargos;
+        }
+        private void LlenarComboBoxCargos()
+        {
+            List<clsCargo> cargos = ObtenerCargosDesdeBaseDeDatos();
+            cbxCargo.ItemsSource = cargos;
+            cbxCargo.DisplayMemberPath = "car_nombre";
         }
     }
 }

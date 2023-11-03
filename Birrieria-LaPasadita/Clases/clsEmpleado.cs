@@ -15,7 +15,7 @@ namespace Birrieria_LaPasadita.Clases
         public string emp_apellidop { get; set; }
         public string emp_apellidom { get; set; }
         public string emp_telefono { get; set; }
-        public string emp_cargo { get; set; }
+        public int emp_cargo { get; set; }
         public string emp_direccion { get; set; }
     }
 }

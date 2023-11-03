@@ -10,7 +10,7 @@ namespace Birrieria_LaPasadita.Clases
     {
         public static string Conectar()
         {
-            string con = @"DATA SOURCE=MATEBOOKABEL\SQLEXPRESS; INITIAL CATALOG=BIRRIERIA; INTEGRATED SECURITY=TRUE";
+            string con = @"DATA SOURCE=COMPUA\SQLEXPRESS; INITIAL CATALOG=BIRRIERIA; INTEGRATED SECURITY=TRUE";
             return con;
         }
     }

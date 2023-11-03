@@ -78,6 +78,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Clases\clsCargo.cs" />
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsConexion.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
