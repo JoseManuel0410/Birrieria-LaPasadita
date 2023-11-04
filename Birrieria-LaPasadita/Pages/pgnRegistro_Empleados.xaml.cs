@@ -73,6 +73,11 @@ namespace Birrieria_LaPasadita.Pages
             Maint.Content = new pgnEmpleados();
         }
 
+<<<<<<< HEAD
+        private void Maint_Navigated(object sender, NavigationEventArgs e)
+        {
+
+=======
         private List<clsCargo> ObtenerCargosDesdeBaseDeDatos()
         {
             List<clsCargo> cargos = new List<clsCargo>();
@@ -99,6 +104,7 @@ namespace Birrieria_LaPasadita.Pages
             List<clsCargo> cargos = ObtenerCargosDesdeBaseDeDatos();
             cbxCargo.ItemsSource = cargos;
             cbxCargo.DisplayMemberPath = "car_nombre";
+>>>>>>> 286e0a2e97aa8218f21cfb1aa04cb71d2dc9dbb7
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Birrieria_LaPasadita.Clases;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -63,7 +64,9 @@ namespace Birrieria_LaPasadita.Pages
             Maint.Content = new pgnEmpleados();
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+
+        private void btnBuscar_Click_1(object sender, RoutedEventArgs e)
+
         {
             int empleadoID;
             if (!int.TryParse(txtID.Text, out empleadoID))
@@ -71,6 +74,7 @@ namespace Birrieria_LaPasadita.Pages
                 MessageBox.Show("Por favor, ingrese un ID válido.");
                 return;
             }
+
             else
             {
                 SqlConnection con = new SqlConnection(clsconexion.Conectar());
@@ -81,6 +85,7 @@ namespace Birrieria_LaPasadita.Pages
                 cmd.ExecuteNonQuery();
 
                 cmd.Parameters.AddWithValue("", empleadoID);
+
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -97,6 +102,7 @@ namespace Birrieria_LaPasadita.Pages
                     con.Close();
                 }
             }
+
 
         }
 
@@ -129,6 +135,8 @@ namespace Birrieria_LaPasadita.Pages
             cbxCargo.ItemsSource = cargos;
             cbxCargo.DisplayMemberPath = "car_nombre";
         }
+
+        
 
     }
 }
