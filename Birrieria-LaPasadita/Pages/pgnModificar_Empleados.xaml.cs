@@ -1,6 +1,7 @@
 ﻿using Birrieria_LaPasadita.Clases;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -59,6 +60,41 @@ namespace Birrieria_LaPasadita.Pages
         {
             grid2.Visibility = Visibility.Collapsed;
             Maint.Content = new pgnEmpleados();
+        }
+
+        private void btnBuscar_Click_1(object sender, RoutedEventArgs e)
+        {
+            int empleadoID;
+            if (!int.TryParse(txtID.Text, out empleadoID))
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.");
+                return;
+            }
+            else { 
+            SqlConnection con = new SqlConnection(clsconexion.Conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+
+            con.Open();
+            cmd.CommandText = "SELECT emp_nombre, emp_apellidop, emp_apellidom, emp_telefono, emp_direccion FROM EMPLEADO WHERE emp_id = " + txtID.Text + "";
+            cmd.ExecuteNonQuery();
+
+            cmd.Parameters.AddWithValue("",empleadoID);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        txtNombre.Text = reader["emp_nombre"].ToString();
+                        txtTelefono.Text = reader["emp_telefono"].ToString();
+                        txtApellidoPat.Text = reader["emp_apellidop"].ToString();
+                        txtApellidoMat.Text = reader["emp_apellidom"].ToString();
+                        txtDireccion.Text = reader["emp_direccion"].ToString();
+                    }
+
+
+                    con.Close();
+                }
+            }
         }
     }
 }

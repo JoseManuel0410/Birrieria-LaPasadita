@@ -62,5 +62,10 @@ namespace Birrieria_LaPasadita.Pages
             grid2.Visibility = Visibility.Collapsed;
             Maint.Content = new pgnEmpleados();
         }
+
+        private void Maint_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
