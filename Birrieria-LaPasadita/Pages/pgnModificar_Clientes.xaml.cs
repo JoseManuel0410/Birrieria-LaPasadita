@@ -58,5 +58,42 @@ namespace Birrieria_LaPasadita.Pages
             grid2.Visibility = Visibility.Collapsed;
             Maint.Content = new pgnClientes();
         }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            int clienteID;
+            if (!int.TryParse(txtID.Text, out clienteID))
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.");
+                return;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(clsconexion.Conectar());
+                SqlCommand cmd = new SqlCommand("", con);
+
+                con.Open();
+                cmd.CommandText = "SELECT cli_nombre, cli_apellidop, cli_apellidom, cli_telefono, cli_domicilio FROM CLIENTE WHERE cli_id = " + txtID.Text + "";
+                cmd.ExecuteNonQuery();
+
+                cmd.Parameters.AddWithValue("", clienteID);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        txtNombre.Text = reader["cli_nombre"].ToString();
+                        txtTelefono.Text = reader["cli_telefono"].ToString();
+                        txtApellidoPat.Text = reader["cli_apellidop"].ToString();
+                        txtApellidoMat.Text = reader["cli_apellidom"].ToString();
+                        txtDireccion.Text = reader["cli_domicilio"].ToString();
+                    }
+
+
+                    con.Close();
+                }
+            }
+
+        }
     }
 }

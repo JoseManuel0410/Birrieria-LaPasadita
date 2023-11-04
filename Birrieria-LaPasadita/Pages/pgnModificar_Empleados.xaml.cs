@@ -25,6 +25,8 @@ namespace Birrieria_LaPasadita.Pages
         public pgnModificar_Empleados()
         {
             InitializeComponent();
+            LlenarComboBoxCargos();
+ 
         }
 
         private void btnModEmpleados_Click(object sender, RoutedEventArgs e)
@@ -60,5 +62,73 @@ namespace Birrieria_LaPasadita.Pages
             grid2.Visibility = Visibility.Collapsed;
             Maint.Content = new pgnEmpleados();
         }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            int empleadoID;
+            if (!int.TryParse(txtID.Text, out empleadoID))
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.");
+                return;
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(clsconexion.Conectar());
+                SqlCommand cmd = new SqlCommand("", con);
+
+                con.Open();
+                cmd.CommandText = "SELECT emp_nombre,emp_telefono,emp_apellidop,emp_apellidom,emp_direccion FROM EMPLEADO WHERE emp_id = " + txtID.Text + "";
+                cmd.ExecuteNonQuery();
+
+                cmd.Parameters.AddWithValue("", empleadoID);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        txtNombre.Text = reader["emp_nombre"].ToString();
+                        txtTelefono.Text = reader["emp_telefono"].ToString();
+                        txtApellidoPat.Text = reader["emp_apellidop"].ToString();
+                        txtApellidoMat.Text = reader["emp_apellidom"].ToString();
+                        txtDireccion.Text = reader["emp_direccion"].ToString();
+                    }
+
+
+                    con.Close();
+                }
+            }
+
+        }
+
+        private List<clsCargo> ObtenerCargosDesdeBaseDeDatos()
+        {
+            List<clsCargo> cargos = new List<clsCargo>();
+
+            using (SqlConnection con = new SqlConnection(clsconexion.Conectar()))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT car_id, car_nombre FROM CARGO", con))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string nombre = reader.GetString(1);
+                        cargos.Add(new clsCargo { car_id = id, car_nombre = nombre });
+                    }
+                }
+            }
+
+            return cargos;
+        }
+
+
+        private void LlenarComboBoxCargos()
+        {
+            List<clsCargo> cargos = ObtenerCargosDesdeBaseDeDatos();
+            cbxCargo.ItemsSource = cargos;
+            cbxCargo.DisplayMemberPath = "car_nombre";
+        }
+
     }
 }

@@ -159,15 +159,12 @@
                                    VerticalAlignment="Center"
                                    Margin="0,0,20,0" />
 
-                        <ComboBox x:Name="cbxCargo"
+                            <ComboBox x:Name="cbxCargo"
                                   materialDesign:HintAssist.Hint="Ordenar por:"
                                   Width="210"
                                   materialDesign:TextFieldAssist.HasClearButton="True"
                                   Style="{StaticResource MaterialDesignFilledComboBox}">
-                            <ComboBoxItem Content="Machetero" />
-                            <ComboBoxItem Content="Mesero" />
-                            <ComboBoxItem Content="Lava platos" />
-                        </ComboBox>
+                            </ComboBox>
 
                     </WrapPanel>
 
@@ -195,7 +192,12 @@
             <WrapPanel HorizontalAlignment="Center"
                        Margin="0,80,0,0">
 
-                <Button x:Name="btnModEmpleados"
+                    <Button x:Name="btnBuscar"
+                            Margin="0,0,50,0"
+                        Content="Buscar empleado"
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnBuscar_Click"/>
+
+                    <Button x:Name="btnModEmpleados"
                         Content="Modificar empleado"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         Click="btnModEmpleados_Click" />
