@@ -194,8 +194,9 @@
 
                     <Button x:Name="btnBuscar"
                             Margin="0,0,50,0"
-                        Content="Buscar empleado"
-                        Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnBuscar_Click"/>
+                            Content="Buscar empleado"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnBuscar_Click_1" />
+
 
                     <Button x:Name="btnModEmpleados"
                         Content="Modificar empleado"

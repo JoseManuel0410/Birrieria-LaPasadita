@@ -19,7 +19,8 @@
     <Grid>
 
         <Frame x:Name="Maint"
-               NavigationUIVisibility="Hidden" />
+
+       NavigationUIVisibility="Hidden" Navigated="Maint_Navigated" />
 
         <Grid x:Name="grid2">
 

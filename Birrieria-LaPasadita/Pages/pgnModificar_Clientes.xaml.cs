@@ -93,7 +93,10 @@ namespace Birrieria_LaPasadita.Pages
                     con.Close();
                 }
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f30d370997bda1114b9087d676a7fdae46475452
         }
     }
 }
