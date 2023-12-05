@@ -14,6 +14,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Birrieria_LaPasadita.Formularios;
+using Birrieria_LaPasadita.Clases;
+using System.Data.SqlClient;
+using System.Data;
+using static Birrieria_LaPasadita.Pages.pgnOrdenes;
+using System.Collections;
 
 namespace Birrieria_LaPasadita.Pages
 {
@@ -22,23 +27,12 @@ namespace Birrieria_LaPasadita.Pages
     /// </summary>
     public partial class pgnOrdenes : Page
     {
+
         public pgnOrdenes()
         {
-            ObservableCollection<Producto> Items1 = new ObservableCollection<Producto>();
             InitializeComponent();
-
-            Items1.Add(new Producto { ID = 1, Productos = "Producto 1", Precio_unitario = 10.0m, Cantidad = 2, Subtotal = 20.0m });
-            Items1.Add(new Producto { ID = 2, Productos = "Producto 2", Precio_unitario = 15.0m, Cantidad = 3, Subtotal = 45.0m });
-            Items1.Add(new Producto { ID = 3, Productos = "Producto 3", Precio_unitario = 8.0m, Cantidad = 5, Subtotal = 40.0m });
-            Items1.Add(new Producto { ID = 1, Productos = "Producto 1", Precio_unitario = 10.0m, Cantidad = 2, Subtotal = 20.0m });
-            Items1.Add(new Producto { ID = 2, Productos = "Producto 2", Precio_unitario = 15.0m, Cantidad = 3, Subtotal = 45.0m });
-            Items1.Add(new Producto { ID = 3, Productos = "Producto 3", Precio_unitario = 8.0m, Cantidad = 5, Subtotal = 40.0m });
-            Items1.Add(new Producto { ID = 1, Productos = "Producto 1", Precio_unitario = 10.0m, Cantidad = 2, Subtotal = 20.0m });
-            Items1.Add(new Producto { ID = 2, Productos = "Producto 2", Precio_unitario = 15.0m, Cantidad = 3, Subtotal = 45.0m });
-            Items1.Add(new Producto { ID = 3, Productos = "Producto 3", Precio_unitario = 8.0m, Cantidad = 5, Subtotal = 40.0m });
-
-            lstproductos.ItemsSource = Items1;
-        }
+           
+    }
         private void rdbDomicilio_Checked(object sender, RoutedEventArgs e)
         {
             cmbInfoDomicilio.Visibility = Visibility.Visible;
@@ -50,73 +44,125 @@ namespace Birrieria_LaPasadita.Pages
             cbxNumCliente.Text = "";
             cmbInfoDomicilio.Visibility = Visibility.Collapsed;
         }
-        public class Producto
-        {
-            public int ID { get; set; }
-            public string Productos { get; set; }
-            public decimal Precio_unitario { get; set; }
-            public int Cantidad { get; set; }
-            public decimal Subtotal { get; set; }
-        }
 
-        private void btntaco_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Tacos:";
-        }
-
-        private void btnmedia_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Medias:";
-        }
-
-        private void btnorden_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Orden:";
-        }
-
-        private void btnquesabirria_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Quesabirrias:";
-        }
-
-        private void btnrefrescos_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Refrescos:";
-        }
-
-        private void btnaguas_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Aguas:";
-        }
-
-        private void btnaguas1L_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Aguas1L:";
-        }
-        private void btncafes_Click(object sender, RoutedEventArgs e)
-        {
-            txtcantidad.Clear();
-            txtcantidad.Focus();
-            txtelemento.Text = "Cafés:";
-        }
-
+        public int ID;
+        
         private void btnextra_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+
+        private ObservableCollection<clsProducto> productList = new ObservableCollection<clsProducto>();
+
+        private void btnagregar_Click(object sender, RoutedEventArgs e)
+        {
+            string con = clsconexion.Conectar();
+            clsProducto producto = new clsProducto();
+
+            int cantidad;
+            if (!int.TryParse(txtcantidad.Text, out cantidad))
+            {
+                MessageBox.Show("La cantidad no es un número válido.");
+                return;
+            }
+
+            List<clsProducto> nuevosProductos = producto.ObtenerProducto(con, ID);
+
+            foreach (var nuevoProducto in nuevosProductos)
+            {
+                if (!productList.Any(p => p.pro_id == nuevoProducto.pro_id))
+                {
+                    nuevoProducto.tempO_cantidad = cantidad;
+                    nuevoProducto.tempO_subtotal = cantidad * nuevoProducto.pro_precio;
+
+                    productList.Add(nuevoProducto);
+                }
+            }
+            decimal total = productList.Sum(p => p.tempO_subtotal);
+            txtTotal.Text = total.ToString();
+            lstproductos.ItemsSource = productList;
+
+        }
+
+        private void InsertarOrden(string con)
+        {
+            foreach (var producto in productList)
+            {
+                using (SqlConnection connection = new SqlConnection(con))
+                {
+                    connection.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(
+                        "INSERT INTO ORDEN_DETALLE (ode_producto, ode_importe, ode_cantidad, ode_subtotal) " +
+                        "VALUES (@ode_producto, @ode_importe, @ode_cantidad, @ode_subtotal)", connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ode_producto", producto.pro_id);
+                        cmd.Parameters.AddWithValue("@ode_importe", producto.tempO_subtotal);
+                        cmd.Parameters.AddWithValue("@ode_cantidad", producto.tempO_cantidad);
+                        cmd.Parameters.AddWithValue("@ode_subtotal", producto.tempO_subtotal);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        private void btntaco_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 1;
+            txtelemento.Text = "Tacos:";
+            
+        }
+
+        private void btnmedia_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 2;
+            txtelemento.Text = "Medias:";
+        }
+
+        private void btnorden_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 3;
+            txtelemento.Text = "Orden:";
+        }
+
+        private void btnquesabirria_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 4;
+            txtelemento.Text = "Quesabirrias:";
+        }
+
+        private void btnrefrescos_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 5;
+            txtelemento.Text = "Refrescos:";
+        }
+
+        private void btnaguas_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 6;
+            txtelemento.Text = "Aguas:";
+        }
+
+        private void btnaguas1L_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 7;
+            txtelemento.Text = "Aguas1L:";
+        }
+
+        private void btncafes_Click_1(object sender, RoutedEventArgs e)
+        {
+            ID = 8;
+            txtelemento.Text = "Cafes:";
+        }
+
+        private void btnregistar_Click(object sender, RoutedEventArgs e)
+        {
+            InsertarOrden(clsconexion.Conectar());
+            productList.Clear();
+            lstproductos.ItemsSource = null;
+            txtTotal.Text = string.Empty;
         }
     }
 }

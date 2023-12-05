@@ -82,6 +82,7 @@
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsConexion.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
+    <Compile Include="Clases\clsProducto.cs" />
     <Compile Include="Clases\GetDataBase.cs" />
     <Compile Include="Formularios\frmbase.xaml.cs">
       <DependentUpon>frmbase.xaml</DependentUpon>

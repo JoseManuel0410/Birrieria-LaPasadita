@@ -116,7 +116,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btntaco_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Taco.png"
                                            Width="35"
@@ -132,7 +132,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btnmedia_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Media.png"
                                            Width="35"
@@ -149,7 +149,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btnorden_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Orden.png"
                                            Width="35"
@@ -166,7 +166,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btnquesabirria_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Quesabirria.png"
                                            Width="35"
@@ -183,7 +183,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btnrefrescos_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Bebidas.png"
                                            Width="35"
@@ -200,7 +200,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btnaguas_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Aguas.png"
                                            Width="35"
@@ -217,7 +217,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btnaguas1L_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Aguas.png"
                                            Width="35"
@@ -234,7 +234,7 @@
                                     Height="50"
                                     Width="200"
                                     Margin="0,20,15,20"
-                                    materialDesign:ButtonAssist.CornerRadius="15">
+                                    materialDesign:ButtonAssist.CornerRadius="15" Click="btncafes_Click_1">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="\Imagenes/Cafe.png"
                                            Width="35"
@@ -282,10 +282,10 @@
                                  Width="110"
                                  Style="{StaticResource MaterialDesignFilledTextBox}" />
 
-                        <Button Content="AGREGAR"
+                        <Button x:Name="btnagregar" Content="AGREGAR"
                                 Margin="0,20,0,0"
                                 HorizontalAlignment="Center"
-                                Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+                                Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnagregar_Click" />
 
                     </StackPanel>
 
@@ -309,22 +309,22 @@
                                       Background="#FFD6D6D6">
 
                             <ListView x:Name="lstproductos"
-                                      ItemsSource="{Binding Items1}"
+                                      ItemsSource="{Binding Productos}"
                                       HorizontalAlignment="Center">
 
                                 <ListView.View>
 
                                     <GridView>
 
-                                        <GridViewColumn DisplayMemberBinding="{Binding ID}"
+                                        <GridViewColumn DisplayMemberBinding="{Binding pro_id}"
                                                         Header="ID" />
-                                        <GridViewColumn DisplayMemberBinding="{Binding Productos}"
+                                        <GridViewColumn DisplayMemberBinding="{Binding pro_nombre}"
                                                         Header="Producto" />
-                                        <GridViewColumn DisplayMemberBinding="{Binding Precio_unitario}"
+                                        <GridViewColumn DisplayMemberBinding="{Binding pro_precio}"
                                                         Header="Precio Uni." />
-                                        <GridViewColumn DisplayMemberBinding="{Binding Cantidad}"
+                                        <GridViewColumn DisplayMemberBinding="{Binding tempO_cantidad}"
                                                         Header="Cantidad" />
-                                        <GridViewColumn DisplayMemberBinding="{Binding Subtotal}"
+                                        <GridViewColumn DisplayMemberBinding="{Binding tempO_subtotal}"
                                                         Header="Subtotal" />
                                     </GridView>
 
@@ -344,7 +344,7 @@
                                    Margin="0,20"
                                    FontWeight="SemiBold" />
 
-                        <TextBlock Text="$0000.00"
+                        <TextBlock x:Name="txtTotal" Text="$0000.00"
                                    FontWeight="Light"
                                    Background="#FFD6D6D6"
                                    Padding="40,15,10,15"
@@ -352,10 +352,10 @@
                                    FontSize="18"
                                    FontStyle="Italic" />
 
-                        <Button Content="REGISTRAR"
+                        <Button x:Name="btnregistar" Content="REGISTRAR"
                                 Margin="0,20,0,0"
                                 HorizontalAlignment="Center"
-                                Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+                                Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnregistar_Click" />
 
                     </StackPanel>
 

@@ -10,6 +10,7 @@ namespace Birrieria_LaPasadita.Clases
 {
     internal class clsEmpleado
     {
+
         public int emp_id { get; set; }
         public string emp_nombre { get; set; }
         public string emp_apellidop { get; set; }
