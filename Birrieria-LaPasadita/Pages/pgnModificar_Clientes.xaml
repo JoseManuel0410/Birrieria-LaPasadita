@@ -156,8 +156,14 @@
 
                     <Button x:Name="btnBuscar"
                             Margin="0,0,50,0"
+<<<<<<< HEAD
                         Content="Buscar cliente"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnBuscar_Click"/>
+=======
+                            Content="Buscar cliente"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnBuscar_Click"
+                             />
+>>>>>>> f30d370997bda1114b9087d676a7fdae46475452
 
                     <Button x:Name="btnModClientes"
                         Content="Modificar cliente"
