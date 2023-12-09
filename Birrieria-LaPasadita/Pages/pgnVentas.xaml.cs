@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Birrieria_LaPasadita.Clases;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +26,8 @@ namespace Birrieria_LaPasadita.Pages
         public pgnVentas()
         {
             InitializeComponent();
+            ObservableCollection<clsVentas> lista = new ObservableCollection<clsVentas>(GetDataBase.ObtenerVentas(clsconexion.Conectar()));
+            dtgdVentas.ItemsSource = lista;
         }
     }
 }

@@ -72,6 +72,41 @@ namespace Birrieria_LaPasadita.Clases
             return lista;
         }
 
+        public static List<clsVentas> ObtenerVentas(string sConexion)
+        {
+            List<clsVentas> lista = new List<clsVentas>();
 
+            SqlConnection con = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", con);
+            SqlDataReader i;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT V.ven_id, O.ord_id, C.cli_id, U.usu_id, M.mdp_id, V.ven_fecha, V.ven_detalles, V.ven_domicilio, VD.vde_producto, P.pro_nombre AS 'Nombre del Producto', VD.vde_importe, VD.vde_cantidad, VD.vde_precio FROM VENTA V INNER JOIN ORDEN O ON V.ven_orden = O.ord_id INNER JOIN CLIENTE C ON V.ven_cliente = C.cli_id INNER JOIN USUARIO U ON V.ven_usuario = U.usu_id INNER JOIN METODO_DE_PAGO M ON V.ven_mdp = M.mdp_id INNER JOIN VENTA_DETALLE VD ON V.ven_id = VD.vde_venta INNER JOIN PRODUCTO P ON VD.vde_producto = P.pro_id";
+            con.Open();
+            i = cmd.ExecuteReader();
+
+            while (i.Read())
+            {
+                clsVentas Venta = new clsVentas()
+                {
+                    ven_id = Convert.ToInt32(i[0]),
+                    ord_id = Convert.ToInt32(i[1]),
+                    cli_id = Convert.ToInt32(i[2]),
+                    usu_id = Convert.ToInt32(i[3]),
+                    mdp_id = Convert.ToInt32(i[4]),
+                    ven_fecha = Convert.ToString(i[5]),
+                    ven_detalles = i.GetString(6),
+                    ven_domicilio = i.GetBoolean(7),
+                    vde_producto = Convert.ToInt32(i[8]),
+                    pro_nombre = i.GetString(9),
+                    vde_importe = i.GetFloat(10),
+                    vde_cantidad = Convert.ToInt32(i[11]),
+                    vde_precio = i.GetFloat (12),
+                };
+                lista.Add(Venta);
+            }
+            con.Close();
+            i.Close();
+            return lista;
+        }
     }
 }
